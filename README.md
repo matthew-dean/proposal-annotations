@@ -99,7 +99,7 @@ const @'num' x = 1;
 
 ## Value annotations
 
-This may seem odd, but we could add metadata to something like a string expression or any other value. This would have (usually) no meaning at runtime, but could be used by a type-checking system as, say, file definitions:
+We can add metadata to something like a string expression or any other value. Sometimes, like in the following example, this might have no meaning at runtime, but could be used by a type-checking system as, say, file definitions:
 ```js
 @'filetype' 'flow';
 ```
@@ -109,7 +109,7 @@ At runtime, this would be the equivalent of evaluating a plain string expression
 ```
 Technically, if this string were assigned to a variable, it would have the metadata `['filetype']`
 
-Similarly, we could annotate a value like:
+Similarly (and perhaps more usefully), we could annotate a value like:
 ```js
 let x = @'number' 5
 ```
