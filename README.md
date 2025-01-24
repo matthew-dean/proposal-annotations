@@ -392,3 +392,24 @@ This is obviously a non-goal, but potentially, this proposal could not only make
 By and large, the Type Annotations has many of the right ideas (a simple, expressive way to annotate a file in a meaningful way that doesn't add too much noise), but ultimately proposes a convoluted solution (offering over a dozen _specific_ syntax pieces to be treated as comments, instead of one).
 
 So, since these proposals have many of the same goals, with the additional goal to add as little new syntax to JavaScript as possible, there's no reason why champions of that proposal would necessarily not be champions of this proposal. This is the reason why this proposal is a fork of that one -- it's essentially a simple syntax proposal for the original set of goals.
+
+**Q: If hash comments are generic, couldn't two different JS files potentially be interpreted by two different meta-languages?**
+
+That's always a possibility, but this proposal doesn't seek to resolve it. TypeScript already allows developers to type-check / not type-check JS files by default in a project, and to opt-in / opt-in individual `.js` files, and presumably, other meta-languages might have similar mechanisms.
+
+It would be recommended that differing systems that "interpret" hash comments in a meaningful way develop a standard (not unlike JSDoc) to specify the "hash comment language".
+
+For example:
+```ts
+// my-typeyscript-file.js
+#:typeyscript
+
+// Now all the hash comments in this file should be interpreted by the TypeyScript build checker
+```
+
+```ts
+// my-typeyscript-file.js
+#:flowy
+
+// Now all the hash comments in this file should be interpreted by the Flowy build checker
+```
