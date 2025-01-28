@@ -28,7 +28,7 @@ This proposal expands upon [Hashbang `#!` comments](https://developer.mozilla.or
 
 This proposal expands this definition to be of "Hash comments", which is parsed by these rules:
 1. A hash comment starts with `#`
-2. A hash comment must be followed by one or more of these special characters: `:`, `^`, `&`, `*`, `|` OR the start of an angle-bracket (`<` ... `>`) or parenthetical (`(` ... `)`) block (see: [Blocks](#blocks))
+2. A hash comment must be followed by one or more of these special characters: `:`, `^`, `&`, `*`, `|` AND/OR the start of an angle-bracket (`<` ... `>`) or parenthetical (`(` ... `)`) block (see: [Blocks](#blocks))
 3. A JavaScript identifer (e.g. `myIdentifier`) w/
    a. zero or one `?`
    a. zero or one `!`
