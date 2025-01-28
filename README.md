@@ -103,7 +103,7 @@ The most notable and common use case for hash comments might be creating a syste
 
 ```ts
 #|macro
-function test(value #:string, thing #:Save<number>) {
+function test(value, thing) {
     if (value === "yes") thing = 1;
     else if (value === "no") thing = 0;
     return thing;
